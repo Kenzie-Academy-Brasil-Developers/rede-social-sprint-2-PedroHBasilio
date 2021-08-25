@@ -16,36 +16,235 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /* VARIÁVEIS */
 :root{
-  
+	--primary-color: #262626;
+	--secondary-color: rgb(189, 189, 189);
 }
 
 /*BODY*/
 body{
-
+	max-width: 935px;
+    margin: 0 auto;
 }
 
 /*TOPO*/
 header{
-	
+	margin: 10px 5px;
 }
+	header img{
+		width: 150px;
+	}
 
 /*RODAPÉ*/
 footer{
-
+	padding: 15px;
+	font-size: 10px;
 }
+	footer nav{
+		column-count: 7;
+		margin-bottom: 10px;
+		line-height: 15px;
+	}
+		footer nav a {
+			text-decoration: none;
+			color: var(--primary-color);
+		}
 
 /*PÁGINA INICIAL*/
 main{
-	
+	font-family: 'Poppins', sans-serif;
+	color: var(--primary-color);
+
 }
 	main .profile-content{
-
+		display: flex;
+		margin: 0 5px;
+		justify-content: space-evenly;
+		flex-direction: row;
 	}
+		.profile-photo{
+			width: 30%;
+			height: 100px;
+		}
+			.profile-photo figure{
+				height: 100px;
+			}
+				.profile-photo figure img{
+					width: 75px;
+					border-radius: 50%;
+					padding: 5px;
+					border: solid 1px var(--secondary-color);
+				}
+		.profile-perfil{
+			margin-top: 10px;
+		}
+			.profile-perfil button{
+				border: solid var(--secondary-color) 1px;
+				border-radius: 3px;
+				font-weight: bold;
+				padding: 5px;
+				width: 100%;
+				background-color: white;
+				cursor: pointer;
+			}
+		
+		.profile-info{
+			padding: 10px;
+		}
+			.profile-content h1{
+				font-size: 24px;
+				margin-bottom: 15px;
+				font-family: Helvetica, Arial, sans-serif;
+			}
+			.profile-info h2{
+				font-weight: 700;
+    			margin-bottom: 10px;
+			}
+			.profile-info ul{
+				list-style: none;
+				margin-bottom: 15px;
+				line-height: 20px;
+				font-size: 12px;
+			}
+				.profile-info ul li{}
+				.profile-info ul li a{
+					text-decoration: none;
+				}
+			.profile-data{
+				display: flex;
+				justify-content: space-between;
+				max-width: 450px;
+				
+			}
+				.profile-data p{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin: 5px;
+					font-weight: 300;
+				}
+					.profile-data span{
+						font-weight: bold;
+					}
+
 
 	main .highlighted-stories{
+		
+	}
+		.highlighted-stories ul{
+			display: flex;
+			border-bottom: solid var(--secondary-color) 1px;
+			padding: 0 5px;
+		}
+			.highlighted-stories ul li{
+				margin: 10px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-size: 12px;
+				cursor: pointer;
+			}
+				.highlighted-stories ul figure{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-right: 25px;
+				}
+	
+					.highlighted-stories ul li img{
+						width: 50px;
+						margin-bottom: 5px;
+						border-radius: 50%;
+						padding: 5px;
+						border: solid 1px rgb(182, 182, 182);
+					}
+				ul .add-new-highlight{
+				}
 
+	main .profile-posts{}
+	.profile-posts nav{
+		width: 90%;
+		display: flex;
+		justify-content: space-around;
+		margin: 0 auto;		
+		padding: 5px 20px;
+	}
+		.profile-posts nav a{
+			text-decoration: none;
+			color: var(--primary-color);
+		}
+
+		.profile-posts ul{
+			column-count: 3;
+    		column-gap: 3px;
+			border-top: solid 1px rgb(182, 182, 182);
+    		padding: 3px;
+		}
+
+			.profile-posts ul li img{
+				width: 100%;
+				cursor: pointer;
+			}
+
+
+
+@media (min-width: 768px){
+	footer nav{
+		display: flex;
+		justify-content: space-between;
 	}
 
-	main .profile-posts{
-
+	main .profile-content{
+		justify-content: flex-start;
 	}
+		.profile-photo{
+			width: 155px;
+			margin-left: 30px;
+			margin-right: 60px;
+			margin-top: 10px;
+		}
+			.profile-photo figure img{
+				width: 170px;
+			}
+
+		.profile-perfil{
+			height: 25px;
+			width: 67%;
+    		max-width: 620px;
+			display: flex;
+			justify-content: space-between;
+		}
+			.profile-perfil button{
+				width: 120px;
+			}
+		
+		.profile-info{
+			margin-left: 240px;
+			margin-right: 43px;
+			position: relative;
+			top: -75px;
+		}
+			.profile-data{
+				position: relative;
+    			top: -10px;
+			}
+
+	main .highlighted-stories{
+		margin-top: -75px;
+	}	
+		.highlighted-stories ul{
+			padding: 0 25px;
+			padding-bottom: 15px;
+		}
+			.highlighted-stories ul li img{
+				width: 77px;
+			}
+
+	.profile-posts nav {
+		margin-top: 15px;
+	}
+	.profile-posts ul{
+		border-top: none;
+		margin-top: 15px;
+	}
+
+}
